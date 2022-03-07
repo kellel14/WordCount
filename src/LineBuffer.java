@@ -19,16 +19,17 @@ public class LineBuffer {
 // buffer, otherwise, returns false.
     //---------------------------------------------------------------------------
     {
-        /**
-         *
-         * revert to original work code here
-         *int current_char = Integer.valueOf(line);
-         *         return current_char == line.length();
-         */
+
+        if(current_char >= line.length()){
+            return true;
+        }
+        else{
+            return false;
+        }
 
         //if(current_char[0])
 
-        return current_char >= line.length();
+        //return current_char >= line.length();
     }
     public String scanWord()
     //---------------------------------------------------------------------------
@@ -43,7 +44,7 @@ public class LineBuffer {
 
         }
         while(isLetter()){
-            next_word += line.charAt(current_char);
+            next_word += line.charAt(current_char - 1);
             current_char++;
         }
         return next_word;
@@ -62,3 +63,4 @@ public class LineBuffer {
                 'A' <= current_char && current_char <= 'Z';
     }
 }
+

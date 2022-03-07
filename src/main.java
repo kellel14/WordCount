@@ -37,7 +37,7 @@ import java.util.Scanner;
             while (!file_found) {
                 try {
                     // get file name
-                    System.out.println("Enter file name (including .txt): ");
+                    System.out.println("Enter file name (including .txt or .rtf for mac): ");
                     file_name = keyboard_input.nextLine();
 
                     // -- open file for reading

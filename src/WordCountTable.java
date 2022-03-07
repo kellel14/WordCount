@@ -39,12 +39,27 @@ public class WordCountTable {
     // Resets true if there is another WordCountPair to iterate over in the table.
 // Otherwise, returns false.
     //---------------------------------------------------------------------------
-    { }
+    {
+        //while(WordCountPair)
+        if(current < word_counts.length){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
     public WordCountPair nextWordCountPair()
     //---------------------------------------------------------------------------
     // Returns the next WordCountPair object in the wordcount table.
     //---------------------------------------------------------------------------
-    { }
+    {
+        //
+        WordCountPair otherWordCount = word_counts[current]; //returns the word count
+        current++; //adds or goes to the next one
+        return otherWordCount; //returns this object
+
+    }
     public void reset()
     //---------------------------------------------------------------------------
     // Resets to first WordCountPair of the table for iterating over.
